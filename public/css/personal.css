@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.navbar a {
+    color: #777;
+    text-decoration: none;
+}
+
+nav {
+    background: white;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 13px 35px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+
+nav ul li::after {
+    content: '';
+    background: #bfddf0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+}
+
+nav ul li:hover {
+    color: #fff;
+}
+
+nav ul li:hover::after {
+    top: 50%;
+    opacity: 1;
+}
+
+body {
+    font-family: "Raleway";
+    background-color: #CDE6F5;
+}
+
+h1 {
+    font-size: 90px;
+    padding-left: 200px;
+}
+
+.intro {
+    padding-left: 200px;
+    padding-top: 50px
+}
+
+.buttons {
+    padding-left: 200px;
+}
+
+.hobbiestxt {
+    padding-left: 200px;
+}
+
+#resumeOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    text-align: center;
+}
+
+#resumeContainer {
+    position: relative;
+    top: 0%;
+    transform: translateY(0%);
+}
+
+#linkedin {
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 10px;
+}
